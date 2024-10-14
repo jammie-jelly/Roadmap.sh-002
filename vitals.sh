@@ -20,7 +20,7 @@ USED_DISK=$(echo "$DISK_INFO" | awk '$NF=="/"{print $3}')
 FREE_DISK=$(echo "$DISK_INFO" | awk '$NF=="/"{print $4}')
 DISK_PERCENTAGE=$(echo "$DISK_INFO" | awk '$NF=="/"{print $5}')
 
-# Get OS name and version from /etc/os-release
+# Get OS name and version
 if [ -f /etc/os-release ]; then
     . /etc/os-release
     OS_NAME="$NAME"
@@ -50,7 +50,6 @@ if [ "$OS_NAME" != "Unknown" ] && [ "$OS_VERSION" != "Unknown" ]; then
     echo -e "${GREEN}OS Version: ${OS_VERSION}${NC}"
 fi
 echo -e "${GREEN}Uptime: ${UPTIME}${NC}"
-#echo -e "${GREEN}Logged in Users: ${LOGGED_USERS}${NC}"
 # Check if logged in users are known
 if [ "$LOGGED_USERS" != "Unknown" ]; then
     echo -e "${GREEN}Logged in Users: ${LOGGED_USERS}${NC}"
