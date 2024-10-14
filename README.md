@@ -11,15 +11,21 @@ Bash script that returns server stats including:
 *   Logged-in users
 *   As well as other system information.
 
-How to run:
+### How to run:
 
-`bash vitals.sh`
+```bash
+bash vitals.sh
+```
 
 or to avoid typing in bash every time you want to run this script
 
-`chmod u+x vitals.sh`
+```bash
+chmod u+x vitals.sh
+```
 
-`./vitals.sh`
+```bash
+./vitals.sh
+```
 
 Part of this challenge:  
 https://roadmap.sh/projects/server-stats
